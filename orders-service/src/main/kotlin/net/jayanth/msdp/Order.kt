@@ -11,7 +11,7 @@ import javax.persistence.Table
  */
 @Entity
 @Table(name = "ORDERS")
-class Order @Autowired constructor(@Id var orderId: String, var customerId: String, var employeeId: String,
+class Order @Autowired constructor(@Id var orderId: Long, var customerId: String, var employeeId: String,
                                    var orderDate: java.sql.Date, var requiredDate: java.sql.Date,
                                    var shippedDate: java.sql.Date, var shipVia: String, var freight: String,
                                    var shipName: String, var shipAddress: String, var shipCity: String,

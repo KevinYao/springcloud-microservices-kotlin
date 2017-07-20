@@ -2,22 +2,18 @@ package net.jayanth.msdp
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy
+import zipkin.server.EnableZipkinServer
 
 @SpringBootApplication
+@EnableZipkinServer
 @EnableDiscoveryClient
-@EnableCircuitBreaker
-@EnableZuulProxy
-class OrderManagementApplication {
+class ZipkinServerApplication{
     companion object {
         @JvmStatic fun main(args: Array<String>) {
-            SpringApplication.run(OrderManagementApplication::class.java, *args)
+            SpringApplication.run(ZipkinServerApplication::class.java, *args)
         }
     }
-
-
 }
 
 
